@@ -16,8 +16,13 @@
   font-family: "poppins-semibold";
   src: url(asset/font/poppins-semibold-webfont.woff) format("woff");
 }
+@font-face {
+  font-family: "poppins-extrabolditalic";
+  src: url(asset/font/poppins-extrabolditalic-webfont.woff) format("woff");
+}
 body {
   font-family: "poppins";
+  min-height: 2000px;
 }
 nav {
   display: flex;
@@ -134,11 +139,75 @@ nav .menu-toggle input:checked ~ span:nth-child(3) {
   transform: scale(0);
   opacity: 0;
 }
-
 main {
-  background-image: url(asset/img/Group\ 2.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 100vh;
+  position: relative;
+}
+main .bg {
+  width: 100%;
+  height: calc(100vh - 60px);
+}
+main .content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 25%;
+}
+main .text {
+  width: 30%;
+  line-height: 1.2;
+}
+main .text h2 {
+  font-size: 30px;
+  font-family: "poppins-extrabolditalic";
+}
+main .text h2 span {
+  color: #fe3636;
+}
+main .text p {
+  font-size: 15px;
+  font-family: "poppins-medium";
+  line-height: 1.5;
+}
+main .text button {
+  position: relative;
+  margin-top: 30px;
+  font-size: 1.2em;
+  padding: 0.7em 1.4em;
+  background-color: #fe3636;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.5em;
+  color: #dedede;
+  box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+}
+main .text button::before {
+  position: absolute;
+  content: "";
+  height: 0;
+  width: 0;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    135deg,
+    rgb(240, 248, 254) 0%,
+    rgb(240, 248, 254) 50%,
+    #fe3636 50%,
+    #ad0d0d 60%
+  );
+  border-radius: 0 0 0.5em 0;
+  box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+main .text button:hover::before {
+  width: 1.6em;
+  height: 1.6em;
+}
+main .text button:active {
+  box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+  transform: translate(0.1em, 0.1em);
+}
+main .logo2 img {
+  width: 300px;
 }
