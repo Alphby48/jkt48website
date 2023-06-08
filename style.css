@@ -24,13 +24,19 @@ body {
   font-family: "poppins";
   min-height: 2000px;
 }
+html {
+  overflow-x: hidden;
+}
 nav {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   height: 60px;
-  background-color: rgba(90, 163, 294, 0.32);
+  background-color: rgba(14, 151, 231, 0.767);
   align-items: center;
   padding: 0 20px;
+  z-index: 99;
 }
 nav .logo {
   display: flex;
@@ -46,19 +52,19 @@ nav .logo h1 {
   font-family: "poppins-semibold";
   color: #fe3636;
 }
-nav ul {
+nav .navbar-nav {
   display: flex;
   width: 40%;
   justify-content: space-between;
   list-style: none;
   letter-spacing: 0.5px;
 }
-nav ul * {
+nav .navbar-nav * {
   box-sizing: border-box;
   transition: all 0.35s ease;
 }
 
-nav ul li a {
+nav .navbar-nav li a {
   text-decoration: none;
   font-family: "poppins-medium";
   text-transform: capitalize;
@@ -66,8 +72,8 @@ nav ul li a {
   position: relative;
   padding: 0.5rem 0.8rem;
 }
-nav ul li a::after,
-nav ul li a::before {
+nav .navbar-nav li a::after,
+nav .navbar-nav li a::before {
   position: absolute;
   height: 15px;
   width: 15px;
@@ -75,36 +81,36 @@ nav ul li a::before {
   transition: all 0.35s ease;
   opacity: 0;
 }
-nav ul li a::before {
+nav .navbar-nav li a::before {
   right: 0;
   top: 0;
   border-right: 3px solid rgb(255, 0, 191);
   border-top: 3px solid rgb(255, 0, 191);
   transform: translate(-100%, 50%);
 }
-nav ul li a::after {
+nav .navbar-nav li a::after {
   left: 0;
   bottom: 0;
   border-left: 3px solid rgb(255, 0, 191);
   border-bottom: 3px solid rgb(255, 0, 191);
   transform: translate(100%, -50%);
 }
-nav ul li a:hover {
+nav .navbar-nav li a:hover {
   color: rgb(255, 0, 191);
 }
-nav ul li a:hover::after,
-nav ul li a:hover::before {
+nav .navbar-nav li a:hover::after,
+nav .navbar-nav li a:hover::before {
   transform: translate(0%, 0%);
   opacity: 1;
 }
-nav .menu-toggle {
+nav .icon-bar .menu-toggle {
   display: none;
   flex-direction: column;
   justify-content: space-between;
   height: 20px;
   position: relative;
 }
-nav .menu-toggle input {
+nav .icon-bar .menu-toggle input {
   position: absolute;
   width: 40px;
   height: 28px;
@@ -114,7 +120,7 @@ nav .menu-toggle input {
   cursor: pointer;
   z-index: 2;
 }
-nav .menu-toggle span {
+nav .icon-bar .menu-toggle span {
   display: block;
   width: 28px;
   height: 3px;
@@ -123,19 +129,19 @@ nav .menu-toggle span {
   transition: all 0.5s;
 }
 /* Animasi */
-nav .menu-toggle span:nth-child(2) {
+nav .icon-bar .menu-toggle span:nth-child(2) {
   transform-origin: 0 0;
 }
-nav .menu-toggle span:nth-child(4) {
+nav .icon-bar .menu-toggle span:nth-child(4) {
   transform-origin: 0 100%;
 }
-nav .menu-toggle input:checked ~ span:nth-child(2) {
+nav .icon-bar .menu-toggle input:checked ~ span:nth-child(2) {
   transform: rotate(45deg) translate(-1px, -1px);
 }
-nav .menu-toggle input:checked ~ span:nth-child(4) {
+nav .icon-bar .menu-toggle input:checked ~ span:nth-child(4) {
   transform: rotate(-45deg) translate(-1px, 0px);
 }
-nav .menu-toggle input:checked ~ span:nth-child(3) {
+nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
   transform: scale(0);
   opacity: 0;
 }
@@ -144,7 +150,7 @@ main {
 }
 main .bg {
   width: 100%;
-  height: calc(100vh - 60px);
+  height: 100vh;
 }
 main .content {
   display: flex;
@@ -210,4 +216,60 @@ main .text button:active {
 }
 main .logo2 img {
   width: 300px;
+}
+/* Responsive */
+@media (max-width: 576px) {
+  nav .logo {
+    padding-left: 12.6%;
+  }
+  nav .logo img {
+    margin-right: 5px;
+  }
+  nav .icon-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+  }
+  nav .icon-bar .menu-toggle {
+    display: flex;
+  }
+  nav .navbar-nav {
+    position: absolute;
+    flex-direction: column;
+    right: 0;
+    width: 50%;
+    top: 0;
+    background-color: rgba(14, 151, 231, 0.993);
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    z-index: -1;
+
+    transform: translateX(100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+  nav .navbar-nav.slide {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  main {
+    background-image: url(asset/img/member\ 1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  main .content {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10%;
+  }
+  main .logo2 img {
+    display: none;
+  }
+  main .text {
+    width: 85%;
+  }
 }
