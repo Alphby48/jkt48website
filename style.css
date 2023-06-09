@@ -154,6 +154,7 @@ main .bg {
 }
 main .content {
   display: flex;
+  flex-wrap: wrap-reverse;
   justify-content: space-around;
   align-items: center;
   position: absolute;
@@ -250,8 +251,8 @@ main .logo2 img {
     position: absolute;
     top: 100%;
     right: -100%;
-    background-color: #fff;
-    width: 40%;
+    background-color: #faefefec;
+    width: 45%;
     height: 100vh;
     transition: 0.3s;
   }
@@ -265,6 +266,14 @@ main .logo2 img {
     padding: 0.5rem;
     font-size: 1.3rem;
   }
+  nav .navbar-nav li a::before {
+    border-right: 2px solid rgb(255, 0, 191);
+    border-top: 2px solid rgb(255, 0, 191);
+  }
+  nav .navbar-nav li a::after {
+    border-left: 2px solid rgb(255, 0, 191);
+    border-bottom: 2px solid rgb(255, 0, 191);
+  }
 
   main {
     background-image: url(asset/img/member\ 1.png);
@@ -273,14 +282,24 @@ main .logo2 img {
     background-repeat: no-repeat;
   }
   main .content {
-    display: flex;
-    justify-content: flex-start;
-    padding: 10%;
+    width: 100%;
+    top: 15%;
   }
   main .logo2 img {
-    display: none;
+    width: 300px;
+    padding-left: 10%;
+    margin-bottom: 3rem;
   }
   main .text {
     width: 85%;
+  }
+  main .text h2,
+  main .text p {
+    text-align: center;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.192);
+  }
+  main .text a {
+    position: relative;
+    left: 32%;
   }
 }
