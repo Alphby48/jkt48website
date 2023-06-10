@@ -23,10 +23,58 @@
 body {
   font-family: "poppins";
   min-height: 2000px;
+  box-sizing: border-box;
+  background-color: rgba(252, 189, 239, 0.925);
 }
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
+.loader {
+  position: fixed;
+  z-index: 9999999;
+  width: 100%;
+  height: 100vh;
+  background-color: #2b2929;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.loader h3 {
+  color: rgb(255, 255, 255);
+}
+.spinner {
+  margin-bottom: 20px;
+  width: 100px;
+  height: 100px;
+  display: grid;
+  border: 4.5px solid #0000;
+  border-radius: 50%;
+  border-color: #dbdcef #0000;
+  animation: spinner-e04l1k 1s infinite linear;
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 5px;
+  border: inherit;
+  border-radius: 50%;
+}
+
+.spinner::before {
+  border-color: #474bff #0000;
+  animation: inherit;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+}
+
+.spinner::after {
+  margin: 9px;
+}
+
 nav {
   position: fixed;
   width: 100%;
@@ -128,26 +176,16 @@ nav .icon-bar .menu-toggle span {
   border-radius: 3px;
   transition: all 0.5s;
 }
-/* Animasi */
-nav .icon-bar .menu-toggle span:nth-child(2) {
-  transform-origin: 0 0;
-}
-nav .icon-bar .menu-toggle span:nth-child(4) {
-  transform-origin: 0 100%;
-}
-nav .icon-bar .menu-toggle input:checked ~ span:nth-child(2) {
-  transform: rotate(45deg) translate(-1px, -1px);
-}
-nav .icon-bar .menu-toggle input:checked ~ span:nth-child(4) {
-  transform: rotate(-45deg) translate(-1px, 0px);
-}
-nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
-  transform: scale(0);
-  opacity: 0;
-}
+
 main {
-  position: relative;
+  background: rgb(219, 220, 239);
+  background: linear-gradient(
+    180deg,
+    rgba(219, 220, 239, 1) 97%,
+    rgba(253, 189, 239, 1) 100%
+  );
 }
+
 main .bg {
   width: 100%;
   height: 100vh;
@@ -218,6 +256,58 @@ main .text button:active {
 main .logo2 img {
   width: 300px;
 }
+section {
+  width: 100%;
+}
+section h1 {
+  text-align: center;
+  font-family: "poppins-semibold";
+  font-size: 2rem;
+  padding: 3.8rem;
+}
+section h1 span {
+  color: rgba(237, 27, 36, 1);
+}
+section .about {
+  display: flex;
+  justify-content: space-around;
+
+  flex-wrap: wrap;
+}
+section .about img {
+  width: 200px;
+  margin-bottom: 40px;
+}
+section .about p {
+  width: 350px;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+/* ANIMASI DAN KEYFRAME START */
+@keyframes spinner-e04l1k {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+nav .icon-bar .menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+nav .icon-bar .menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+nav .icon-bar .menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+nav .icon-bar .menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(-1px, 0px);
+}
+nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+  opacity: 0;
+}
+/* ANIMASI DAN KEYFRAME END */
+
 /* Responsive */
 @media (max-width: 768px) {
   html {

@@ -13,3 +13,8 @@ document.addEventListener("click", function (e) {
     navbarNav.classList.remove("slide");
   }
 });
+
+window.addEventListener("load", function () {
+  var loader = document.querySelector(".loader");
+  loader.style.display = "none";
+});
