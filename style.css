@@ -264,6 +264,7 @@ section h1 {
   font-family: "poppins-semibold";
   font-size: 2rem;
   padding: 3.8rem;
+  text-shadow: 2px 2px 1.5px rgba(0, 0, 0, 0.3);
 }
 section h1 span {
   color: rgba(237, 27, 36, 1);
@@ -282,6 +283,7 @@ section .about p {
   width: 350px;
   font-size: 1.2rem;
   line-height: 1.3;
+  text-shadow: 1.1px 1.1px 1px rgba(0, 0, 0, 0.3);
 }
 /* ANIMASI DAN KEYFRAME START */
 @keyframes spinner-e04l1k {
@@ -309,6 +311,15 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
 /* ANIMASI DAN KEYFRAME END */
 
 /* Responsive */
+@media (max-width: 1098px) {
+  nav .navbar-nav {
+    width: 53%;
+  }
+  nav .navbar-nav li a {
+    padding: 0.5rem 0.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   html {
     font-size: 62.5%;
@@ -382,14 +393,22 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
   }
   main .text {
     width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   main .text h2,
   main .text p {
     text-align: center;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.192);
   }
-  main .text a {
-    position: relative;
-    left: 32%;
+  /* SECTION ABOUT START */
+  section h1 {
+    font-size: 2.5rem;
+    padding-top: 6rem;
+  }
+  section .about p {
+    font-size: 1.7rem;
+    width: 80%;
   }
 }
