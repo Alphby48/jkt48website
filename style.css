@@ -256,34 +256,92 @@ main .text button:active {
 main .logo2 img {
   width: 300px;
 }
-section {
+.sect-1 {
   width: 100%;
 }
-section h1 {
+.sect-1 h1,
+.sect-2 h1 {
   text-align: center;
   font-family: "poppins-semibold";
   font-size: 2rem;
   padding: 3.8rem;
   text-shadow: 2px 2px 1.5px rgba(0, 0, 0, 0.3);
 }
-section h1 span {
+.sect-1 h1 span,
+.sect-2 h1 span {
   color: rgba(237, 27, 36, 1);
 }
-section .about {
+.sect-1 .about {
   display: flex;
   justify-content: space-around;
 
   flex-wrap: wrap;
 }
-section .about img {
+.sect-1 .about img {
   width: 200px;
   margin-bottom: 40px;
 }
-section .about p {
+.sect-1 .about p {
   width: 350px;
   font-size: 1.2rem;
   line-height: 1.3;
   text-shadow: 1.1px 1.1px 1px rgba(0, 0, 0, 0.3);
+}
+/* SECT-2 START */
+.sec-2 {
+  width: 100%;
+  position: relative;
+}
+.sect-2 .nbox {
+  position: relative;
+  left: 6%;
+  display: block;
+}
+
+.sect-2 .hbox {
+  border: 2px solid rgba(108, 248, 240, 1);
+  width: 5.5rem;
+  position: relative;
+  left: 40px;
+  border-radius: 20px;
+  background-color: rgba(108, 248, 240, 1);
+  margin-bottom: 20px;
+}
+.sect-2 .hbox h2 {
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "poppins-medium";
+  font-size: 1.2rem;
+  padding: 0.2rem 0;
+}
+.sect-2 .row {
+  border-radius: 42px;
+  background: #faf8f8;
+  box-shadow: 16px 16px 33px rgb(228, 133, 247);
+  position: relative;
+  width: 60%;
+  padding: 1rem;
+}
+.sect-2 .row .row-box {
+  display: flex;
+  align-items: center;
+}
+.sect-2 .row .row-box img {
+  width: 150px;
+  margin-right: 20px;
+}
+.sect-2 .nbox .row .row-box .box-text {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 70px;
+}
+.sect-2 .nbox .row .row-box .box-text p:nth-child(1) {
+  text-transform: capitalize;
+  color: rgba(254, 54, 54, 1);
+}
+.sect-2 .nbox .row .row-box .box-text p:nth-child(:last-child) {
+  color: rgba(0, 0, 0, 0.56);
 }
 /* ANIMASI DAN KEYFRAME START */
 @keyframes spinner-e04l1k {
@@ -402,12 +460,13 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
     text-align: center;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.192);
   }
-  /* SECTION ABOUT START */
-  section h1 {
+  /* .sect-1 ABOUT START */
+  .sect-1 h1,
+  .sect-2 h1 {
     font-size: 2.5rem;
     padding-top: 6rem;
   }
-  section .about p {
+  .sect-1 .about p {
     font-size: 1.7rem;
     width: 80%;
   }
