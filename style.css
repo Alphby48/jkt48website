@@ -348,9 +348,11 @@ main .logo2 img {
   text-transform: capitalize;
   color: rgba(254, 54, 54, 1);
   line-height: 1.4;
+  text-shadow: 1px 1px 0.5px rgb(228, 133, 247);
 }
 .sect-2 .nbox .row .row-box .box-text p:nth-child(2) {
   color: rgba(15, 15, 15, 0.664);
+  text-shadow: 1px 1px 0.5px rgba(91, 87, 92, 0.356);
 }
 .sect-2 .hd2 {
   width: 7rem;
@@ -432,6 +434,62 @@ main .logo2 img {
 .sect-2 .nbox .row .overlay .float .float-btn:hover {
   background-color: rgb(210, 10, 250);
   color: rgb(255, 255, 255);
+}
+/* SECT-3 START */
+.sect-3 {
+  background-color: rgba(163, 244, 255, 0.219);
+  border-radius: 40px;
+}
+.sect-3 .sch {
+  margin: 2rem 2rem;
+}
+.sect-3 .sch .sch-day {
+  background-color: rgba(255, 9, 9, 1);
+  width: 6rem;
+  border-radius: 20px;
+  padding: 0.2rem 0;
+  margin: 0 0 1rem 2.3rem;
+  box-shadow: 10px 10px 15px rgb(228, 133, 247);
+}
+.sect-3 .sch .sch-day h2 {
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "poppins-medium";
+  color: #ffffff;
+  font-size: 1.35rem;
+}
+.sect-3 .sch .sch-row {
+  width: 50%;
+  height: 200px;
+  border-radius: 42px;
+  background: #faf8f8;
+  box-shadow: 16px 16px 33px rgb(228, 133, 247);
+  padding: 1rem 0;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+.sect-3 .sch .sch-row .sch-set {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  line-height: 1.4;
+}
+.sect-3 .sch .sch-row .sch-set img {
+  width: 100px;
+}
+.sect-3 .sch .sch-row .sch-set p {
+  text-transform: capitalize;
+}
+.sect-3 .sch .sch-row .sch-set p:nth-child(2) {
+  color: rgba(237, 27, 36, 1);
+  text-shadow: 0.8px 0.8px 0.5px rgb(228, 133, 247);
+}
+.sect-3 .sch .sch-row .sch-set p:nth-child(3),
+.sect-3 .sch .sch-row .sch-set p:nth-child(4) {
+  color: rgba(15, 15, 15, 0.664);
+  text-shadow: 0.5px 0.5px 0.3px rgba(73, 72, 73, 0.39);
 }
 /* ANIMASI DAN KEYFRAME START */
 @keyframes spinner-e04l1k {
