@@ -439,6 +439,7 @@ main .logo2 img {
 .sect-3 {
   background-color: rgba(163, 244, 255, 0.219);
   border-radius: 40px;
+  padding-bottom: 4rem;
 }
 .sect-3 .sch {
   margin: 2rem 2rem;
@@ -460,11 +461,11 @@ main .logo2 img {
 }
 .sect-3 .sch .sch-row {
   width: 50%;
-  height: 200px;
+  height: 250px;
   border-radius: 42px;
   background: #faf8f8;
   box-shadow: 16px 16px 33px rgb(228, 133, 247);
-  padding: 1rem 0;
+  padding: 1.5rem;
   display: flex;
   gap: 50px;
   justify-content: center;
@@ -481,6 +482,7 @@ main .logo2 img {
 }
 .sect-3 .sch .sch-row .sch-set p {
   text-transform: capitalize;
+  text-align: center;
 }
 .sect-3 .sch .sch-row .sch-set p:nth-child(2) {
   color: rgba(237, 27, 36, 1);
@@ -686,5 +688,39 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
     font-size: 1.3rem;
     line-height: 1.3;
     width: 100%;
+  }
+  /* sec-3 start */
+  .sect-3 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .sect-3 .sch {
+    margin: 3rem 0;
+    width: 80%;
+  }
+  .sect-3 .sch .sch-row {
+    width: 100%;
+    height: 210px;
+    gap: 30px;
+  }
+  .sect-3 .sch .sch-day {
+    width: 7rem;
+    margin-bottom: 2rem;
+  }
+  .sect-3 .sch .sch-day h2 {
+    font-size: 1.6rem;
+  }
+  .sect-3 .sch .sch-row .sch-set img {
+    width: 60%;
+  }
+  .sect-3 .sch .sch-row .sch-set p {
+    font-size: 1.15rem;
+    text-align: center;
+  }
+}
+@media (max-width: 564px) {
+  .sect-3 .sch .sch-row {
+    padding: 3.5rem 0;
   }
 }
