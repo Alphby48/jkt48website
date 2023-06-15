@@ -22,7 +22,7 @@
 }
 body {
   font-family: "poppins";
-  min-height: 4000px;
+  min-height: 7000px;
   box-sizing: border-box;
   background-color: rgba(252, 189, 239, 0.925);
 }
@@ -262,7 +262,8 @@ main .logo2 img {
 }
 .sect-1 h1,
 .sect-2 h1,
-.sect-3 h1 {
+.sect-3 h1,
+.sect-4 h1 {
   text-align: center;
   font-family: "poppins-semibold";
   font-size: 2rem;
@@ -271,7 +272,8 @@ main .logo2 img {
 }
 .sect-1 h1 span,
 .sect-2 h1 span,
-.sect-3 h1 span {
+.sect-3 h1 span,
+.sect-4 h1 span {
   color: rgba(237, 27, 36, 1);
 }
 .sect-1 .about {
@@ -632,7 +634,8 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
   /* .sect-1 ABOUT START */
   .sect-1 h1,
   .sect-2 h1,
-  .sect-3 h1 {
+  .sect-3 h1,
+  .sect-4 h1 {
     font-size: 2.5rem;
     padding-top: 6rem;
   }
