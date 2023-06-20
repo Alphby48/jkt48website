@@ -5,6 +5,10 @@
 }
 /* Font */
 @font-face {
+  font-family: "josefinsans";
+  src: url(asset/font/solway-regular-webfont.woff);
+}
+@font-face {
   font-family: "poppins";
   src: url(asset/font/poppins-regular-webfont.woff) format("woff");
 }
@@ -97,7 +101,7 @@ nav .logo img {
   height: 40px;
 }
 nav .logo h1 {
-  font-family: "poppins-semibold";
+  font-family: "josefinsans";
   color: #fe3636;
 }
 nav .navbar-nav {
@@ -529,7 +533,124 @@ main .logo2 img {
   background-color: #dbdcef;
   border: 1px solid #474bff;
 }
+/* SECT-4 START */
+.sect-4 .m-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+.sect-4 .m-row .kt-row a {
+  border-radius: 42px;
+  background: #faf8f8;
+  box-shadow: 16px 16px 33px rgb(228, 133, 247);
+  width: 220px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+  margin: 2rem;
+  text-decoration: none;
+}
+.sect-4 .m-row .kt-row a img {
+  width: 150px;
+  height: 200px;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+}
+.sect-4 .m-row .kt-row a h5 {
+  font-family: "poppins-medium";
+  font-size: 1.2rem;
+  background-color: rgb(228, 133, 247);
+  padding: 0.2rem 0.6rem;
+  border-radius: 10px;
+  color: #ffffff;
+  box-shadow: 5px 5px 10px rgba(205, 144, 218, 0.514);
+}
+.sect-4 .m-row .overlay {
+  width: 0;
+  height: 0;
+  position: fixed;
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  padding: 100px 0;
+  transition: all 300ms ease-in-out;
+}
+.sect-4 .m-row .overlay:target {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  align-items: center;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.sect-4 .m-row .overlay .float {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(251, 230, 255);
+  width: 70%;
+  height: 500px;
+  padding: 2rem;
+  position: relative;
+}
+.sect-4 .m-row .overlay:target .float {
+  animation: zoom 1s;
+}
+.sect-4 .m-row .overlay .float h3 {
+  text-align: center;
+  font-family: "poppins-medium";
+  font-size: 1.4rem;
+  text-shadow: 1px 1px 2px rgb(228, 133, 247);
+  margin-bottom: 2rem;
+}
+.sect-4 .m-row .overlay .float h3 span {
+  color: rgba(254, 54, 54, 1);
+}
+.sect-4 .m-row .overlay .float .flt-mbr {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.sect-4 .m-row .overlay .float .flt-mbr img {
+  width: 150px;
+  height: 200px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgb(228, 133, 247);
+}
+.sect-4 .m-row .overlay .float .flt-mbr table tr td {
+  padding: 0.3rem 0.5rem;
+  text-transform: capitalize;
+  color: rgba(254, 54, 54, 1);
+  text-shadow: 1px 1px 0.5px rgb(228, 133, 247);
+}
+.sect-4 .m-row .overlay .float .float-btn {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 0.2rem 0.5rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  background-color: rgb(210, 10, 250);
+  color: #ffffff;
+  border: 1px solid rgb(252, 250, 252);
+  box-shadow: 5px 5px 6px rgba(204, 144, 218, 0.767);
+  transition: all 0.3s;
+  text-transform: capitalize;
+}
+.sect-4 .m-row .overlay .float .float-btn:hover {
+  background-color: #ffffff;
+  color: rgb(210, 10, 250);
+  border: 1px solid rgb(204, 48, 235);
+}
 /* ANIMASI DAN KEYFRAME START */
 @keyframes spinner-e04l1k {
   100% {
@@ -785,6 +906,41 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
     font-family: "poppins";
     letter-spacing: 0;
   }
+  /* sect-4 start */
+
+  .sect-4 .m-row .kt-row a {
+    width: 150px;
+    padding: 2rem 0;
+    margin: 1rem;
+  }
+  .sect-4 .m-row .kt-row a img {
+    width: 100px;
+    height: 150px;
+    margin-bottom: 0.6rem;
+  }
+  .sect-4 .m-row .kt-row a h5 {
+    padding: 0.4rem 0.6rem;
+  }
+  .sect-4 .m-row .overlay .float h3 {
+    font-size: 2.3rem;
+  }
+  .sect-4 .m-row .overlay .float .flt-mbr {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sect-4 .m-row .overlay .float .flt-mbr img {
+    width: 100px;
+    height: 150px;
+    margin-bottom: 2rem;
+  }
+  .sect-4 .m-row .overlay .float .flt-mbr table tr td {
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
+  .sect-4 .m-row .overlay .float .float-btn {
+    padding: 0.5rem 1rem;
+    font-size: 1.9rem;
+  }
 }
 @media (max-width: 564px) {
   .sect-3 .sch .sch-row {
@@ -792,5 +948,22 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
   }
   .sect-3 .sch .sch-row .overlay .float {
     width: 85%;
+  }
+  .sect-4 .m-row .overlay .float {
+    width: 90%;
+  }
+  .sect-4 .m-row .overlay .float .flt-mbr table tr td {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 320px) {
+  .sect-4 .m-row .overlay .float h3 {
+    font-size: 1.5rem;
+  }
+  .sect-4 .m-row .overlay .float .flt-mbr table tr td {
+    font-size: 1rem;
+  }
+  .sect-4 .m-row .overlay .float .float-btn {
+    font-size: 1.2rem;
   }
 }
