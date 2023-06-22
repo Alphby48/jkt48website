@@ -26,7 +26,6 @@
 }
 body {
   font-family: "poppins";
-  min-height: 7000px;
   box-sizing: border-box;
   background-color: rgba(252, 189, 239, 0.925);
 }
@@ -534,6 +533,10 @@ main .logo2 img {
   border: 1px solid #474bff;
 }
 /* SECT-4 START */
+.sect-4 {
+  height: auto;
+  padding-bottom: 5rem;
+}
 .sect-4 .m-row {
   display: flex;
   flex-wrap: wrap;
@@ -562,6 +565,7 @@ main .logo2 img {
 }
 .sect-4 .m-row .kt-row a h5 {
   font-family: "poppins-medium";
+  letter-spacing: 1.5px;
   font-size: 1.2rem;
   background-color: rgb(228, 133, 247);
   padding: 0.2rem 0.6rem;
@@ -645,11 +649,53 @@ main .logo2 img {
   box-shadow: 5px 5px 6px rgba(204, 144, 218, 0.767);
   transition: all 0.3s;
   text-transform: capitalize;
+  cursor: pointer;
 }
 .sect-4 .m-row .overlay .float .float-btn:hover {
   background-color: #ffffff;
   color: rgb(210, 10, 250);
   border: 1px solid rgb(204, 48, 235);
+}
+/* FOOTER */
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #0077ffad;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .footicon {
+  display: flex;
+  list-style: none;
+  width: 15%;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+footer .footicon li a {
+  font-size: 24px;
+  color: #fe3636;
+}
+footer .footnav {
+  display: flex;
+  list-style: none;
+  width: 30%;
+  justify-content: space-between;
+  margin-bottom: 1.4rem;
+}
+footer .footnav li a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #fe3636;
+}
+footer .credit p {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.3rem;
+}
+footer .credit p a {
+  text-decoration: none;
+  color: #fe3636;
 }
 /* ANIMASI DAN KEYFRAME START */
 @keyframes spinner-e04l1k {
@@ -955,6 +1001,18 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
   .sect-4 .m-row .overlay .float .flt-mbr table tr td {
     font-size: 1.3rem;
   }
+  footer .footicon {
+    width: 40%;
+  }
+  footer .footnav {
+    width: 80%;
+  }
+  footer .footnav li a {
+    font-size: 1.3rem;
+  }
+  footer .credit p {
+    font-size: 1.5rem;
+  }
 }
 @media (max-width: 320px) {
   .sect-4 .m-row .overlay .float h3 {
@@ -965,5 +1023,8 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
   }
   .sect-4 .m-row .overlay .float .float-btn {
     font-size: 1.2rem;
+  }
+  footer .footnav {
+    width: 90%;
   }
 }
