@@ -687,6 +687,11 @@ footer .footnav li a {
   text-decoration: none;
   text-transform: capitalize;
   color: #fe3636;
+  font-weight: 500;
+}
+footer .footicon li a:hover,
+footer .footnav li a:hover {
+  color: rgb(210, 10, 250);
 }
 footer .credit p {
   font-size: 1rem;
@@ -759,6 +764,12 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
   }
   .sect-3 .sch .sch-row .overlay .float .float-text {
     padding-left: 0px;
+  }
+  footer .footnav {
+    width: 40%;
+  }
+  footer .footicon {
+    width: 25%;
   }
 }
 
@@ -1005,13 +1016,15 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
     width: 40%;
   }
   footer .footnav {
-    width: 80%;
+    width: 70%;
   }
   footer .footnav li a {
-    font-size: 1.3rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
   }
   footer .credit p {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 @media (max-width: 320px) {
