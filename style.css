@@ -98,6 +98,7 @@ nav .logo {
 nav .logo img {
   width: 30px;
   height: 40px;
+  z-index: 9999;
 }
 nav .logo h1 {
   font-family: "josefinsans";
@@ -181,12 +182,9 @@ nav .icon-bar .menu-toggle span {
 }
 
 main {
-  background: rgb(219, 220, 239);
-  background: linear-gradient(
-    180deg,
-    rgba(219, 220, 239, 1) 97%,
-    rgba(253, 189, 239, 1) 100%
-  );
+  background-image: url(asset/img/bnig1.jpg);
+  background-position: left;
+  background-size: cover;
 }
 
 main .bg {
@@ -209,6 +207,8 @@ main .text {
 main .text h2 {
   font-size: 30px;
   font-family: "poppins-extrabolditalic";
+  color: #dbdcef;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.582);
 }
 main .text h2 span {
   color: #fe3636;
@@ -217,6 +217,8 @@ main .text p {
   font-size: 15px;
   font-family: "poppins-medium";
   line-height: 1.5;
+  color: #dbdcef;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.582);
 }
 main .text .btn {
   position: relative;
@@ -259,6 +261,31 @@ main .text .btn:active {
 main .logo2 img {
   width: 300px;
 }
+main .home-pg {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  z-index: 99;
+}
+main .home-pg a button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #09eecf;
+  cursor: pointer;
+  border: none;
+  box-shadow: 8px 8px 9px rgba(114, 189, 194, 0.322);
+}
+main .home-pg a button:hover {
+  background-color: blueviolet;
+  transition: all 0.5s;
+  color: rgba(252, 189, 239, 0.925);
+}
+main .home-pg a button:active {
+  box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+  transform: translate(0.4em, 0.4em);
+}
 .sect-1 {
   width: 100%;
   padding-bottom: 6rem;
@@ -297,9 +324,7 @@ main .logo2 img {
   text-shadow: 1.1px 1.1px 1px rgba(222, 106, 245, 0.712);
 }
 /* SECT-2 START */
-.sect-2 {
-  position: relative;
-}
+
 .sect-2 .nbox {
   position: relative;
   padding-left: 6%;
@@ -656,6 +681,90 @@ main .logo2 img {
   color: rgb(210, 10, 250);
   border: 1px solid rgb(204, 48, 235);
 }
+.sect-5 {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 0;
+  box-shadow: 16px 16px 33px rgb(228, 133, 247);
+  align-items: center;
+  background-color: rgba(51, 201, 228, 0.192);
+  margin: 6rem;
+  border-radius: 25px;
+}
+.sect-5 a {
+  text-decoration: none;
+}
+.sect-5 a .btcs {
+  position: relative;
+  width: 120px;
+  height: 40px;
+  background-color: rgba(182, 35, 219, 0.925);
+  display: flex;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.sect-5 a .btcs::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -4px;
+  top: -1px;
+  margin: auto;
+  width: 128px;
+  height: 48px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.sect-5 a .btcs::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.sect-5 a .btcs:hover::after {
+  filter: blur(30px);
+}
+.sect-5 a .btcs:hover::before {
+  transform: rotate(-180deg);
+}
+.sect-5 a .btcs:active::before {
+  scale: 0.7;
+}
+.sect-5 .ct-bx {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 2rem;
+}
+.sect-5 .ct-bx .box-ctx {
+  width: 190px;
+  background-color: #e4b9fde7;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+}
+.sect-5 .ct-bx .box-ctx h5 {
+  font-family: "poppins-medium";
+  margin: 1.3rem 0;
+  color: rgb(191, 26, 224);
+}
+.sect-5 .ct-bx .box-ctx p {
+  font-size: 12px;
+  line-height: 1.8;
+}
 /* FOOTER */
 footer {
   width: 100%;
@@ -718,6 +827,15 @@ footer .credit p a {
     opacity: 1;
   }
 }
+@keyframes rotate {
+  0% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+    background-color: blueviolet;
+  }
+}
 nav .icon-bar .menu-toggle span:nth-child(2) {
   transform-origin: 0 0;
 }
@@ -744,6 +862,7 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
   nav .navbar-nav li a {
     padding: 0.5rem 0.5rem;
   }
+
   .sect-2 .nbox .row .overlay .float {
     height: 350px;
   }
@@ -794,7 +913,7 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
     justify-content: space-between;
     width: 20%;
   }
-  nav .icon-bar .toggle img {
+  nav .icon-bar .toggle a img {
     width: 2.5rem;
   }
   nav .icon-bar .menu-toggle {
@@ -857,6 +976,7 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
   main .text p {
     text-align: center;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.192);
+    color: #000000;
   }
   /* .sect-1 ABOUT START */
   .sect-1 h1,
@@ -998,6 +1118,19 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
     padding: 0.5rem 1rem;
     font-size: 1.9rem;
   }
+  .sect-5 {
+    margin: 4rem 1.5rem;
+  }
+  .sect-5 .ct-bx {
+    flex-wrap: wrap;
+  }
+  .sect-5 .ct-bx .box-ctx {
+    margin: 1rem;
+    width: 150px;
+  }
+  .sect-5 .ct-bx .box-ctx h5 {
+    font-size: 1.3rem;
+  }
 }
 @media (max-width: 564px) {
   .sect-3 .sch .sch-row {
@@ -1010,6 +1143,13 @@ nav .icon-bar .menu-toggle input:checked ~ span:nth-child(3) {
     width: 90%;
   }
   .sect-4 .m-row .overlay .float .flt-mbr table tr td {
+    font-size: 1.3rem;
+  }
+  .sect-5 .ct-bx .box-ctx {
+    margin: 0.9rem;
+    width: 130px;
+  }
+  .sect-5 .ct-bx .box-ctx h5 {
     font-size: 1.3rem;
   }
   footer .footicon {
