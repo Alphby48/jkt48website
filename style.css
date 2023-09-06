@@ -84,7 +84,7 @@ nav {
   display: flex;
   justify-content: space-between;
   height: 60px;
-  background-color: rgba(14, 151, 231, 0.767);
+  background-color: rgba(146, 80, 233, 0.918);
   align-items: center;
   padding: 0 20px;
   z-index: 99;
@@ -102,7 +102,7 @@ nav .logo img {
 }
 nav .logo h1 {
   font-family: "josefinsans";
-  color: #fe3636;
+  color: #ff0000;
 }
 nav .navbar-nav {
   display: flex;
@@ -120,7 +120,7 @@ nav .navbar-nav li a {
   text-decoration: none;
   font-family: "poppins-medium";
   text-transform: capitalize;
-  color: #fe3636;
+  color: #00ff00;
   position: relative;
   padding: 0.5rem 0.8rem;
 }
@@ -769,7 +769,7 @@ main .home-pg a button:active {
 footer {
   width: 100%;
   height: auto;
-  background-color: #0077ffad;
+  background-color: rgba(146, 80, 233, 0.918);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -795,12 +795,12 @@ footer .footnav {
 footer .footnav li a {
   text-decoration: none;
   text-transform: capitalize;
-  color: #fe3636;
+  color: #00ff00;
   font-weight: 500;
 }
 footer .footicon li a:hover,
 footer .footnav li a:hover {
-  color: rgb(210, 10, 250);
+  color: rgb(255, 0, 191);
 }
 footer .credit p {
   font-size: 1rem;
@@ -809,7 +809,7 @@ footer .credit p {
 }
 footer .credit p a {
   text-decoration: none;
-  color: #fe3636;
+  color: #00ff00;
 }
 /* ANIMASI DAN KEYFRAME START */
 @keyframes spinner-e04l1k {
